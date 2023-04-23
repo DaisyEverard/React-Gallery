@@ -35,9 +35,3 @@ const labels = [
      ]
 
 export default labels
-
-// export default {
-//     castle_trani, catkins, courtyard,
-//     flat, ivy_fence, japan_bridge,
-//     shop_westonbirt, wheelbarrow
-// }
