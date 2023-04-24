@@ -1,0 +1,13 @@
+.galleryGrid {
+    padding: 10px;
+    display: grid
+}
+#card {
+    margin: 10px;
+}
+#card img {
+    width: 100%;
+}
+.cardBody {
+    padding-left: 10px;
+}

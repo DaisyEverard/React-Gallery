@@ -2,44 +2,57 @@ import React, {useState} from "react";
 import Card from "./Card.jsx";
 
 import imageList from "../../images.jsx"
+import "./gallery.css"
 
-const frame1 = "css grid?"
 const styles = {
     classic: {
-        main: {borderColor: "orange"},
-        layout: {gridTemplateColumns: "repeat(2, 50%)",
-        gridTemplateRows: "auto"}   
+        wholeGallery: {color: "black",
+          backgroundColor: "#a5a5a5"}, 
+        wholeCard: {border: "5px solid black",
+          backgroundColor: "white"},
+        layout: {gridTemplateColumns: "repeat(2, 50%)"},
+        cardBody: {display: "block"}   
     }, 
-    grid: {
-        main: {borderColor: "pink"},
-        layout: { gridTemplateColumns: "60% 40%",
-        gridTemplateRows: "60% 40%"}
+    mini: {
+        wholeGallery: {color: "white",
+          backgroundColor: "black"}, 
+        wholeCard: {border: "none",
+          backgroundColor: "black"},
+        layout: {gridTemplateColumns: "repeat(4, 25%)"},
+        cardBody: {display: "none"}
     },
-    flip: {
-        main: {borderColor: "yellow"}, 
-        layout: { gridTemplateColumns: "40% 60%",
-        gridTemplateRows: "40% 60%"}
+    noLabels: {
+        wholeGallery: {color: "white",
+          backgroundColor: "black"}, 
+        wholeCard: {border: "5px solid black",
+          backgroundColor: "black"}, 
+        layout: { gridTemplateColumns: "50% 50%"},
+        cardBody: {display: "none"}
     }
 }
 
 const Gallery = () => {
     const [layout, setLayout] = useState("classic")
 
-    return <div id="gallery">
+    return <div id="gallery" style={styles[layout]["wholeGallery"]}>
         <h1>Gallery</h1>
         <button onClick={() => {setLayout("classic")}}>
             Classic</button>
-        <button onClick={() => {setLayout("grid")}}>
-            Grid</button>
-        <button onClick={() => {setLayout("flip")}}>
-            Flip</button>
+        <button onClick={() => {setLayout("mini")}}>
+            Mini</button>
+        <button onClick={() => {setLayout("noLabels")}}>
+            No Labels</button>
 
         <div className="galleryGrid"
-        style={{...styles[layout]["layout"], display: "grid"}}>{imageList.map((img, ind) => {
+        style={styles[layout]["layout"]}>
+            {imageList.map((img, ind) => {
             return <Card src={img.src} 
             title={img.title} 
             description={img.description}
-            key={ind} index={ind} style={styles[layout]["main"]}/>
+            key={ind} index={ind}
+            style={styles[layout]["wholeCard"]}
+            cardStyle={styles[layout]["cardBody"]}
+            />
         })}</div>
     </div>
 }
