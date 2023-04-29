@@ -22,10 +22,8 @@
     font-family: monospace;
 }
 #header a {
-    color: white;
     text-decoration: none;
     font-weight:  bold;
-    background-color: black;
     padding: 5px;
     font-size: 1.2rem;
 }

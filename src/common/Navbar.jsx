@@ -4,10 +4,33 @@ import { Link } from "react-router-dom";
 const Navbar = (props) => {
   const {mode} = props;
 
+  const styles = {
+    dark: {
+      color: "white",
+      backgroundColor: "#5f5f5f"
+    },
+    light: {
+      color: "black",
+      backgroundColor: "#dadada"
+    }
+}
+
     return <nav>
-        <Link to="/" className="nav-link" id="info-link">HOME</Link>
-        <Link to="/gallery" className="nav-link" id="main-link">GALLERY</Link>
-        <Link to="/contact" className="nav-link" id="main-link">CONTACT</Link>
+        <Link to="/" 
+          className="nav-link" 
+          id="info-link"
+          style={styles[mode]}>
+          HOME</Link>
+        <Link to="/gallery" 
+          className="nav-link" 
+          id="main-link"
+          style={styles[mode]}>
+          GALLERY</Link>
+        <Link to="/contact" 
+          className="nav-link" 
+          id="main-link"
+          style={styles[mode]}
+          >CONTACT</Link>
   </nav>
 }
 
