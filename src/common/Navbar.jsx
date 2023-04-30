@@ -26,11 +26,11 @@ const Navbar = (props) => {
           id="main-link"
           style={styles[mode]}>
           GALLERY</Link>
-        <Link to="/contact" 
+        <Link to="/cssmation" 
           className="nav-link" 
           id="main-link"
           style={styles[mode]}
-          >CONTACT</Link>
+          >CSSMATION</Link>
   </nav>
 }
 

@@ -1,5 +1,8 @@
+#home {
+    padding: 20px;
+}
 #home .imageContainer { 
-    margin: 20px auto; 
+    margin: 0 auto; 
     min-width: 210px; 
     width: 65vw; 
     max-width: 330px;
@@ -11,4 +14,10 @@
 #home img {
     border-radius: 50%;
     max-width: 100%;
+}
+#home .about {
+    margin: 10px 5%; 
+}
+#home h3 {
+    text-align: center;
 }

@@ -1,0 +1,57 @@
+.flower {
+    height: 40vw;
+    width: 40vw; 
+    max-width: 300px;
+    max-height: 300px;
+    position: absolute;
+    top: 250px;
+    left: 20px; 
+}
+.petal {
+    height: 50%;
+    width: 10%; 
+    left: 30%; 
+    position: absolute;
+    transform-origin: 100% 100%;
+    /* makes petal shape */
+    border: solid black; 
+    border-width: 0 30px 0 30px;
+    border-radius: 10% 70% 10% 70%
+}
+
+/* rotates position of 6 items in circle */
+.six-one {
+    transform: rotate(0deg);
+}
+.six-two {
+    transform: rotate(60deg);
+}
+.six-three {
+    rotate: 120deg;
+}
+.six-four {
+    rotate: 180deg;
+}
+.six-five {
+    rotate: 240deg;
+}
+.six-six {
+    rotate: 300deg;
+}
+
+/* hover animations */
+.rotate-60-middle:hover {
+    transition: all 1s linear 0.1s;
+    transform: rotate(60deg);
+    transform-origin: 50% 50%;
+}
+.rotate-360-middle:hover {
+    transition: all 2s ease 0.5s;
+    transform: rotate(360deg);
+    transform-origin: 50% 50%;
+}
+.resize:hover {
+    transition: all 2s ease 0.5s;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+}

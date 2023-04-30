@@ -6,7 +6,7 @@ import Header from "./common/Header"
 import Footer from "./common/Footer"
 import Home from "./pages/Home";
 import Gallery from "./pages/gallery/Gallery";
-import Contact from "./pages/Contact";
+import CSSmation from "./pages/CSSmation";
 
 function App() {
   // dark/light screen modes
@@ -27,7 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home mode={mode}/>}/>
           <Route path="/gallery" element={<Gallery mode={mode}/>}/>
-          <Route path="/contact" element={<Contact mode={mode}/>}/>
+          <Route path="/cssmation" element={<CSSmation mode={mode}/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
